@@ -3,19 +3,17 @@ const newTodoInput = document.getElementById("new-todo");
 const todoList = document.getElementById("todo-list");
 
 todoForm.addEventListener("submit", function (event) {
-  event.preventDefaultx();
+  event.preventDefault();
 
   const todoText = newTodoInput.value.trim();
 
   if (todoText) {
     addTodo(todoText);
-
     newTodoInput.value = "";
   }
 });
 
 function addTodo(text) {
-  console.log(text);
   const li = document.createElement("li");
   li.innerHTML = `
   <input type="checkbox"> 
@@ -23,7 +21,9 @@ function addTodo(text) {
   <button class="delete">Delete</button>
   <button class="edit">Edit</button>
   `;
+
   todoList.appendChild(li);
+
   li.querySelector(".delete").addEventListener("click", deleteTodo);
   li.querySelector("input").addEventListener("change", toggleComplete);
   li.querySelector(".edit").addEventListener("click", editTodo);

@@ -20,6 +20,11 @@ h1 {
   margin-bottom: 20px;
 }
 
+#todo-form {
+  display: flex;
+  align-items: center;
+}
+
 input[type="text"] {
   width: calc(100% - 100px);
   padding: 10px;
@@ -36,12 +41,6 @@ button[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
   margin-left: 10px;
-}
-
-#todo-form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 ul {
